@@ -1,6 +1,8 @@
 # DirtMaze
 A hollow knight decoration generater
 
+这是一个自动生成德特茅斯迷宫装修预设的可执行文件。
+
 在release界面下载DirtMaze.exe
 
 双击运行（可能报毒，如果报毒的话关掉杀毒软件再打开就行了，不信任的可以翻源代码自己编译，都有注释，没有夹带私货）
