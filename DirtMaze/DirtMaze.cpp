@@ -174,7 +174,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 vector<pair<double,double>> generate_spike(int seed){
 	vector<pair<double,double>>spike;
 	vector<pair<int,int>>edge,block;//edge表示两点有边，block表示两点间有刺
-	if(!seed)seed=time(0);
+	if(seed==-1)seed=time(0);
 	srand(seed);
 	//并查集
 	vector<int>fa(maxn,0);
