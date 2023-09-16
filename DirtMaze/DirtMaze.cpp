@@ -145,7 +145,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		levernum=0;
 		for(int i=0;szlever[i]!='\0';i++)levernum=levernum*10+szlever[i]-'0';
 		levernum=std::min(levernum,38);
-		if (wmId==6)seed=-1;
+		if (wmId==6)seed=time(0);
 		spike=generate_spike(seed);
 		lever=generate_lever(levernum,seed);
 		door=generate_door(levernum);
@@ -174,7 +174,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 vector<pair<double,double>> generate_spike(int seed){
 	vector<pair<double,double>>spike;
 	vector<pair<int,int>>edge,block;//edge表示两点有边，block表示两点间有刺
-	if(seed==-1)seed=time(0);
 	srand(seed);
 	//并查集
 	vector<int>fa(maxn,0);
